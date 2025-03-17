@@ -11,7 +11,7 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose port 8080 for Cloud Run
-EXPOSE 8080
+EXPOSE 8000
 
 # Command to run the Flask app using Gunicorn
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "deploy:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "deploy:app"]
